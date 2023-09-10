@@ -1,0 +1,18 @@
+{
+    "jap": {
+        "no_epi": "1",
+        "link": "https://player.ryuk.to?id=gongitsune-episode-",
+        "down_links": [
+            "MTM5ODg3"
+        ]
+    },
+    "eng": {
+        "no_epi": 0,
+        "link": "https://player.ryuk.to?id=gongitsune-dub-episode-",
+        "down_links": []
+    },
+    "episodes_names": [
+        "Gongitsune",
+        "Gongitsune"
+    ]
+}
