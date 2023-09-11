@@ -7,7 +7,7 @@ function setContinueWatchingContainer(){
     if(continueWatchingData.length != 0){
         let tempData = "";
         let counteR = 0;
-        for(let i = 0; i < continueWatchingData.length; i ++){
+        for(let i = continueWatchingData.length - 1; i >= 0; i --){
             tempData += `<div class="anime-continue-watching">
                   <a class="anchor-to-continue-watching" title="Continue Watching One Piece" href="${continueWatchingData[i].animeUrl}">
                      <div class="data_cont-watching__" style="background: url(${continueWatchingData[i].animeImage}) no-repeat center center;background-size: 100% auto;">
