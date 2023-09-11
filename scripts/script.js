@@ -6,7 +6,7 @@ let urlMainPart = window.location.href.split("/");
 for(let i = 0; i < urlMainPart.length; i ++){
     let flag = 0;
     for(let i = 0; i < urlMainPart[3].length; i ++){
-        if(urlMainPart[3][i] === urlMainPart[3][i].toUpperCase())
+        if(Number(urlMainPart[3][i] == NaN) && urlMainPart[3][i] === urlMainPart[3][i].toUpperCase())
             flag = 1;
     }
     if(flag === 1){
@@ -208,6 +208,7 @@ function addAnimeToQueue(){
     let animeImage__ = document.getElementsByClassName("image-in-container-image-div")[0].getAttribute("src");
     let animeName__ = document.getElementsByTagName("h1")[0].textContent;
     let animeUrl__ = window.location.href;
+    console.log(animeUrl__);
 
     if(localStorage.continueWatching == undefined){
         let animeDataCV = [
