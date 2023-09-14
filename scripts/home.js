@@ -8,6 +8,17 @@ function setContinueWatchingContainer(){
         let tempData = "";
         let counteR = 0;
         for(let i = continueWatchingData.length - 1; i >= 0; i --){
+            let animeNameForHome = continueWatchingData[i].animeName;
+            let lastClickedButtonForHome = localStorage.getItem("lastClickedButton" + animeNameForHome.replace(" ", ""));
+            // console.log(lastClickedButtonForHome);
+            let animeEpisodeNumberForHome;
+            let listOfLastClickedButtonData;
+            if(lastClickedButtonForHome != null){
+               listOfLastClickedButtonData = lastClickedButtonForHome.split("-");
+               animeEpisodeNumberForHome = listOfLastClickedButtonData[listOfLastClickedButtonData.length - 1];
+            }
+            else
+               animeEpisodeNumberForHome = 1;
             tempData += `<div class="anime-continue-watching">
                   <a class="anchor-to-continue-watching" title="Continue Watching One Piece" href="${continueWatchingData[i].animeUrl}">
                      <div class="data_cont-watching__" style="background: url(${continueWatchingData[i].animeImage}) no-repeat center center;background-size: 100% auto;">
@@ -18,10 +29,10 @@ function setContinueWatchingContainer(){
                      <div class="anime-data-continue-watching__">
                         <div class="anime-info-continue-watching">
                            <div class="anime-episodes-count__">
-                              <span>Episode-${continueWatchingData[i].animeEpisodeNumber}</span>
+                              <span>Episode-${animeEpisodeNumberForHome}</span>
                            </div>
                            <div class="anime-name-cont-watching__">
-                              <h3>${continueWatchingData[i].animeName}</h3>
+                              <h3>${animeNameForHome}</h3>
                            </div>
                         </div>
                      </div>
