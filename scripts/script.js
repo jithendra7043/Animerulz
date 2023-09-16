@@ -2,26 +2,26 @@
 // var recom_anime = document.getElementsByClassName("recommendations")[0];
 // var nav = document.getElementsByClassName("nav-bar")[0];
 
-let urlMainPart = window.location.href.split("/");
-for(let i = 0; i < urlMainPart.length; i ++){
-    let flag = 0;
-    for(let i = 0; i < urlMainPart[3].length; i ++){
-        if(Number(urlMainPart[3][i] == NaN) && urlMainPart[3][i] === urlMainPart[3][i].toUpperCase())
-            flag = 1;
-    }
-    if(flag === 1){
-        urlMainPart[3] = urlMainPart[3].toLowerCase();
-        let newLocation = ""
-        for(let j = 0 ; j < urlMainPart.length ; j ++ ){
-            newLocation += urlMainPart[j] ;
-            if(j < urlMainPart.length - 1)
-                newLocation += "/";
-        }
-        console.log(newLocation);
-        window.location.replace(newLocation);
-        break;
-    }
-}
+// let urlMainPart = window.location.href.split("/");
+// for(let i = 0; i < urlMainPart.length; i ++){
+//     let flag = 0;
+//     for(let i = 0; i < urlMainPart[3].length; i ++){
+//         if(Number(urlMainPart[3][i] == NaN) && urlMainPart[3][i] === urlMainPart[3][i].toUpperCase())
+//             flag = 1;
+//     }
+//     if(flag === 1){
+//         urlMainPart[3] = urlMainPart[3].toLowerCase();
+//         let newLocation = ""
+//         for(let j = 0 ; j < urlMainPart.length ; j ++ ){
+//             newLocation += urlMainPart[j] ;
+//             if(j < urlMainPart.length - 1)
+//                 newLocation += "/";
+//         }
+//         console.log(newLocation);
+//         window.location.replace(newLocation);
+//         break;
+//     }
+// }
 // console.log(urlMain);
 // var add_this = document.getElementById("addthis");
 setTimeout(preloaderDisplayNone, 1000);
