@@ -319,3 +319,37 @@ if(wholeMoreSeasonsContainer != undefined){
     if(moreSeasonsOfThisSection.length == 0)
         wholeMoreSeasonsContainer.style.display = "none";
 }
+
+const commentSection = document.getElementsByClassName("data-comment-section_")[0];
+
+function setCommentSection(){
+    let commentSectionButtonNew = document.querySelector(".show-more-comments button");
+    // let commentSection = document.getElementsByClassName("data-comment-section_")[0];
+
+    console.log(commentSection.offsetHeight <= 1000, commentSection.offsetHeight);
+    if(commentSection.offsetHeight <= 1000){
+        commentSectionButtonNew.style.display = "none";
+    }else{
+        commentSection.style.maxHeight = "1000px";
+    }
+    commentSectionButtonNew.setAttribute("onclick", "moreCommentsNew()");
+}
+
+setTimeout(setCommentSection, 3000);
+
+function moreCommentsNew() {
+    // let commentSection = document.getElementsByClassName("data-comment-section_")[0];
+    let buttonShowMore = document.querySelector(".comment-section_ .show-more-comments button");  
+    
+    commentSection.removeAttribute("style");
+    buttonShowMore.innerHTML = "show less";
+    buttonShowMore.setAttribute("onclick", "lessCommentsNew()");
+}
+function lessCommentsNew(){
+    // let commentSection = document.getElementsByClassName("data-comment-section_")[0];
+    let buttonShowMore = document.querySelector(".comment-section_ .show-more-comments button");
+
+    commentSection.style.maxHeight = "1000px";
+    buttonShowMore.innerHTML = "show more";
+    buttonShowMore.setAttribute('onclick', "moreCommentsNew()");
+}
