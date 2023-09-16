@@ -154,10 +154,35 @@ function change_dub(n){
 
 // const watchListButton = document.querySelector(".notification-for-anime-to-watchList span");
 
+function setAnimeInWatchList(){
+    let watchListButton = document.getElementsByClassName("button-read-manga")[0];
+    let animesInWatchList = localStorage.getItem("watchList");
+    let animeName = document.getElementsByTagName("h1")[0].textContent;
 
+    if(animesInWatchList != undefined){
+        let animesInWatchListData = JSON.parse(animesInWatchList);
+
+        animesInWatchListData.forEach(function(animeInWatchListData) {
+            if(animeInWatchListData.animeName === animeName){
+                watchListButton.innerText = "View WatchList";
+                watchListButton.setAttribute("onclick", "window.open('https://animerulz.in/watchlist', '_self')");
+            }
+        })
+    }
+}
+
+setTimeout(setAnimeInWatchList, 500);
 
 function addAnimeToList(){
     let watchListButton = document.getElementsByClassName("button-read-manga")[0];
+    let notificationContainer = document.createElement('div');
+    notificationContainer.setAttribute("class", "pop-up-watch-list-notification");
+    notificationContainer.innerHTML = `
+   <div class="content-notification-watch-list">
+      <span>Anime Added to Watch List</span>
+   </div>`;
+    document.getElementsByTagName("body")[0].appendChild(notificationContainer);
+    // notificationContainer.style.opactiy = "1 !important";
     watchListButton.textContent = "View Watch List";
     watchListButton.setAttribute("onclick", "window.open('https://animerulz.in/WatchList/', '_self')");
     let animeLink = window.location.href;
@@ -200,8 +225,12 @@ function addAnimeToList(){
 
         localStorage.setItem("watchList", JSON.stringify(anime___));
     }
+    setTimeout(removeNotificationContainer, 3000);
 }
 
+function removeNotificationContainer(){
+    document.getElementsByClassName("pop-up-watch-list-notification")[0].style.bottom = "-100px";
+}
 
 //for continue watching anime in home page
 function addAnimeToQueue(){
@@ -267,13 +296,13 @@ function disableScroll(){
 function setTrendingAnimeInSearch(){
     let trendingAnimeInSearchContainer = document.getElementsByClassName("list-search-trending")[0];
     let trendingAnime = [
-        "One Piece", "Jujutsu Kaisen Season 2", "Bleach Thousand Year Blood War Season 2", "Zom 100", "Demon SLayer Swordsmith Village Arc"
+        "One Piece", "Jujutsu Kaisen Season 2", "Bleach Thousand Year Blood War Season 2", "Zom 100", "Demon Slayer Swordsmith Village Arc"
     ]
     let temppp = "";
     let counterrr = 0;
     trendingAnime.forEach((animee) => {
         temppp += `
-        <li class="element-search-tr__" onclick="window.open('../search/?anime=${animee}', '_self')" id="ele-${counterrr}"><svg class="arrow-element-in-search__" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32H544c17.7 0 32 14.3 32 32V288c0 17.7-14.3 32-32 32s-32-14.3-32-32V205.3L342.6 374.6c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160H384z"/></svg><span class="txt">${animee}</span></li>
+        <li class="element-search-tr__" onclick="window.open('https://animerulz.in/search/?anime=${animee}', '_self')" id="ele-${counterrr}"><svg class="arrow-element-in-search__" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32H544c17.7 0 32 14.3 32 32V288c0 17.7-14.3 32-32 32s-32-14.3-32-32V205.3L342.6 374.6c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160H384z"/></svg><span class="txt">${animee}</span></li>
         `;
         counterrr ++;
     });
