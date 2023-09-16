@@ -1842,7 +1842,7 @@ body{
   position: relative;
 }
 .comment-section_ .data-comment-section_{
-  height: 500px;
+  max-height: 1000px;
   overflow: hidden;
 }
 .comment-section_ .show-more-comments button{
@@ -1954,6 +1954,7 @@ body{
   /* width: 100%; */
   height: 300px;
   position: relative;
+  /* transition: all 0.5s; */
   /* background-color: #faa300; */
 }
 .animes-in-container-dubbed .anime-data-dubbed__{
@@ -2010,6 +2011,7 @@ body{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    transition:  all 1s;
 }
 .animes-in-container-dubbed .anime-dubbed__ .languages-list{
   color: rgba(255, 255, 255, 0.8);
@@ -2090,6 +2092,10 @@ body{
     .animes-in-container-dubbed .anime-dubbed__{
       height: 200px;
     }
+  }
+
+  .animes-in-container-dubbed .anime-dubbed__:hover .anime-dubbed-name__ h3{
+    -webkit-line-clamp: 3;
   }
 
   /* for continue Watching division */
@@ -2674,5 +2680,43 @@ body{
   .alphabet-container .alphabet-anime-container{
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
+  }
+}
+
+
+/* notification for anime added to watch list */
+
+.pop-up-watch-list-notification{
+  position: fixed;
+  bottom: 50px;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  transition: all 0.5s;
+  animation: popUp 0.1s ease-in;
+}
+@keyframes popUp {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.pop-up-watch-list-notification .content-notification-watch-list{
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+@media only screen and (max-width:600px){
+  .pop-up-watch-list-notification{
+    font-size: 13px;
+  }
+  .pop-up-watch-list-notification .content-notification-watch-list{
+    width: 200px;
   }
 }
