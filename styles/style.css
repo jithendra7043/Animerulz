@@ -735,24 +735,26 @@ h1{
       /* min-width: 200px; */
     }
   }
-  /* .anime-4{
-    background:linear-gradient(0deg, rgba(0,0,0,0.7),rgba(0,0,0,0.1)), url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21175-EH06qlfF8TnB.jpg") ;
-  }
-  .anime-2{
-    background:linear-gradient(0deg, rgba(0,0,0,0.7),rgba(0,0,0,0.1)), url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx127230-FlochcFsyoF4.png") ;
-  }
-  .anime-3{
-    background:linear-gradient(0deg, rgba(0,0,0,0.7),rgba(0,0,0,0.1)), url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137822-4dVWMSHLpGf8.png") ;
-  }
-  .anime-1{
-    background:linear-gradient(0deg, rgba(0,0,0,0.7),rgba(0,0,0,0.1)), url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-C6FPmWm59CyP.jpg") ;
-  }
-  .anime-5{
-    background:linear-gradient(0deg, rgba(0,0,0,0.7),rgba(0,0,0,0.1)), url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg") ;
-  } */
   .anime-rec-div{
+    animation: fadeIn 1s both ease;
     background-size: contain;
+    animation-timeline: view();
+    animation-range: entry 5% cover 40%;
   } 
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+      width: 70%;
+      margin-inline: auto;
+      transform: translateY(50px);
+    }
+    100%{
+      opacity: 1;
+      width: 100%;
+      margin-inline: auto;
+      transform: translateY(0);
+    }
+  }
   .anime-rec-div h2{
     color:rgba(255,255,255,0.8);
     text-align: center;
@@ -1834,7 +1836,6 @@ body{
 }
 
 .comment-section_{
-  /* background-color: rgba(255, 255, 255, 0.2); */
   width: 95%;
   max-width: 1500px;
   margin-inline: auto;
@@ -1842,7 +1843,7 @@ body{
   position: relative;
 }
 .comment-section_ .data-comment-section_{
-  max-height: 1000px;
+  /* max-height: 1000px; */
   overflow: hidden;
 }
 .comment-section_ .show-more-comments button{
