@@ -1,29 +1,3 @@
-// var image_in_video = document.getElementsByClassName("image-in-video-player")[0];
-// var recom_anime = document.getElementsByClassName("recommendations")[0];
-// var nav = document.getElementsByClassName("nav-bar")[0];
-
-// let urlMainPart = window.location.href.split("/");
-// for(let i = 0; i < urlMainPart.length; i ++){
-//     let flag = 0;
-//     for(let i = 0; i < urlMainPart[3].length; i ++){
-//         if(Number(urlMainPart[3][i] == NaN) && urlMainPart[3][i] === urlMainPart[3][i].toUpperCase())
-//             flag = 1;
-//     }
-//     if(flag === 1){
-//         urlMainPart[3] = urlMainPart[3].toLowerCase();
-//         let newLocation = ""
-//         for(let j = 0 ; j < urlMainPart.length ; j ++ ){
-//             newLocation += urlMainPart[j] ;
-//             if(j < urlMainPart.length - 1)
-//                 newLocation += "/";
-//         }
-//         console.log(newLocation);
-//         window.location.replace(newLocation);
-//         break;
-//     }
-// }
-// console.log(urlMain);
-// var add_this = document.getElementById("addthis");
 setTimeout(preloaderDisplayNone, 1000);
 window.addEventListener("load", function(){
     preloaderDisplayNone();
@@ -42,8 +16,6 @@ function nav_bar_cust(){
     let old_nav;
     let new_nav = 0;
     window.onscroll = function(){
-        // const temp = document.getElementById("active-page-tag-season");
-        // document.getElementsByTagName("html")[0].innerHTML = temp;
         var nav = document.getElementById("nav-bar-id");
         var search_bar = document.getElementById("search-input");
         var navRect = nav.getBoundingClientRect();
@@ -144,15 +116,6 @@ function change_dub(n){
     element2.classList.add("active-item-set");
 }
 
-// setTimeout(shrinkCommentBox, 1000);
-
-// function shrinkCommentBox(){
-//     const commentBox = document.querySelector(".disqus-thread iframe");
-//     commentBox.style = "width:100%;max-width:1500px;margin-left:auto;margin-right:auto;";
-// }
-
-
-// const watchListButton = document.querySelector(".notification-for-anime-to-watchList span");
 
 function setAnimeInWatchList(){
     let watchListButton = document.getElementsByClassName("button-read-manga")[0];
@@ -237,7 +200,7 @@ function addAnimeToQueue(){
     let animeImage__ = document.getElementsByClassName("image-in-container-image-div")[0].getAttribute("src");
     let animeName__ = document.getElementsByTagName("h1")[0].textContent;
     let animeUrl__ = window.location.href;
-    console.log(animeUrl__);
+    // console.log(animeUrl__);
 
     if(localStorage.continueWatching == undefined){
         let animeDataCV = [
