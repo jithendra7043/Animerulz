@@ -33,7 +33,7 @@ setWatchListAnime()
 
 function removeAnimeFromWatchList(index){
     let dataAvailableWatchList = JSON.parse(dataFoWatchList);
-    console.log(dataAvailableWatchList);
+    // console.log(dataAvailableWatchList);
     let dataWatchList_;
 
     for(let j = 0; j < dataAvailableWatchList.length ; j ++){
@@ -41,7 +41,7 @@ function removeAnimeFromWatchList(index){
             dataAvailableWatchList.splice(j, 1);
         }
     }
-    console.log(dataAvailableWatchList);
+    // console.log(dataAvailableWatchList);
 
     localStorage.setItem("watchList", JSON.stringify(dataAvailableWatchList));
     
