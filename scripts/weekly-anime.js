@@ -54,10 +54,10 @@ try{
         case "One Piece" : 
             setAnimeTimings(0, 9, 0);
             break;
-        case "Bleach : TYBW Season 2" : 
+        case "Bleach: Thousand-Year Blood War - The Seperation" : 
             setAnimeTimings(6, 21, 0);
             break;
-        case "Zom 100" :
+        case "Zom 100: Bucket List of the Dead" :
             setAnimeTimings(2, 14, 30);
             break;
     }
@@ -73,10 +73,10 @@ catch{
         case "One Piece" : 
             setAnimeTimings(0, 9, 0);
             break;
-        case "Bleach : TYBW Season 2" : 
+        case "Bleach: Thousand-Year Blood War - The Seperation" : 
             setAnimeTimings(1, 21, 0);
             break;
-        case "Zom 100" :
+        case "Zom 100: Bucket List of the Dead" :
             setAnimeTimings(5, 14, 30);
             break;
     }
