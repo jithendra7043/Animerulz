@@ -1,6 +1,6 @@
 {
     "jap": {
-        "no_epi": "8",
+        "no_epi": "10",
         "link": "https://player.ryuk.to?id=bleach-sennen-kessen-hen-ketsubetsu-tan-episode-",
         "down_links": [
             "MjA3ODQ4",
@@ -10,21 +10,36 @@
             "MjA5NjEy",
             "MjA5OTY4",
             "MjEwMzc3",
-            "MjEwODAz"
+            "MjEwODAz",
+            "MjExNjQ1",
+            "MjEyMDQ2"
         ]
     },
     "eng": {
-        "no_epi": "4",
+        "no_epi": "7",
         "link": "https://player.ryuk.to?id=bleach-sennen-kessen-hen-ketsubetsu-tan-dub-episode-",
         "down_links": [
             "MjA5NzE2",
             "MjA5OTY5",
             "MjEwMzc4",
-            "MjExMDI1"
+            "MjExMDI1",
+            "MjExMTI5",
+            "MjExNDM0",
+            "MjEyMDQ0"
         ]
     },
     "episodes_names": [
-        "Bleach: Thousand-Year Blood War - The Separation",
-        "Bleach: Thousand-Year Blood War - The Separation"
-    ]
+        "The Last 9 Days",
+        "Peace from Shadows",
+        "The Fundamental Virulence",
+        "Heart of Wolf",
+        "Rages at Ringside",
+        "The White Haze",
+        "I Am The Edge",
+        "The Headless Star",
+        "Marching out the Zombies",
+        "Marching out the Zombies 2",
+        "Too early to win Too late to know"
+]
+
 }
