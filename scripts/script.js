@@ -286,19 +286,22 @@ if(wholeMoreSeasonsContainer != undefined){
 const commentSection = document.getElementsByClassName("data-comment-section_")[0];
 
 function setCommentSection(){
-    let commentSectionButtonNew = document.querySelector(".show-more-comments button");
-    // let commentSection = document.getElementsByClassName("data-comment-section_")[0];
+    try
+        {let commentSectionButtonNew = document.querySelector(".show-more-comments button");
+        // let commentSection = document.getElementsByClassName("data-comment-section_")[0];
 
-    console.log(commentSection.offsetHeight <= 1000, commentSection.offsetHeight);
-    if(commentSection.offsetHeight <= 1000){
-        commentSectionButtonNew.style.display = "none";
-    }else{
-        commentSection.style.maxHeight = "1000px";
-    }
-    commentSectionButtonNew.setAttribute("onclick", "moreCommentsNew()");
+        console.log(commentSection.offsetHeight <= 1000, commentSection.offsetHeight);
+        if(commentSection.offsetHeight <= 1000){
+            commentSectionButtonNew.style.display = "none";
+        }else{
+            commentSection.style.maxHeight = "1000px";
+        }
+        commentSectionButtonNew.setAttribute("onclick", "moreCommentsNew()");}
+        catch{}
 }
 
 setTimeout(setCommentSection, 3000);
+
 
 function moreCommentsNew() {
     // let commentSection = document.getElementsByClassName("data-comment-section_")[0];
