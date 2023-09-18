@@ -735,7 +735,8 @@ h1{
       /* min-width: 200px; */
     }
   }
-  .anime-rec-div{
+
+  .anime-rec-div, .anime-tr{
     animation: fadeIn 1s both ease;
     background-size: contain;
     animation-timeline: view();
