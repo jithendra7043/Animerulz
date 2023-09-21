@@ -11,7 +11,12 @@ window.addEventListener("load", function(){
         catch{}
     }
 
-//for navbar 
+//for navbar
+document.getElementsByClassName("scroll-to-top-div")[0].setAttribute("onclick", "scrollToTopDiv()");
+
+function scrollToTopDiv(){
+    document.getElementsByTagName("nav")[0].scrollIntoView();
+}
 function nav_bar_cust(){
     let old_nav;
     let new_nav = 0;
@@ -43,7 +48,7 @@ function nav_bar_cust(){
         }
 
 
-        let scrollToTopDiv = document.getElementsByClassName("scroll-to-top-div")[0];
+        let scrollToTopDivElement = document.getElementsByClassName("scroll-to-top-div")[0];
 
         let scrolledAmount = window.scrollY;
         let head = document.getElementsByTagName("head")[0];
@@ -52,10 +57,10 @@ function nav_bar_cust(){
 
         let verticalHeight = window.innerHeight;
         if(headRect.top - windowVerticalScrollNew < verticalHeight - 1.5 * verticalHeight){
-            scrollToTopDiv.style.right = "40px";
+            scrollToTopDivElement.style.right = "40px";
         }
         else{
-            scrollToTopDiv.style.right = '-50px';
+            scrollToTopDivElement.style.right = '-50px';
         }
     };
 }
