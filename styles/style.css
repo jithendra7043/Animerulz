@@ -2347,20 +2347,22 @@ body{
   }
 }
 @media only screen and (max-width:500px) {
-.content-bottom__ .data-items-bottom{
-  display: none;
-}
-.bottom-data-container .container___bottom__{
-  display: none;
-}
-  .bottom{
-    text-align: center;
-  }
   .bottom-content-data___ .extra-anchors{
-    flex-direction: column;
+    /* flex-direction: column; */
+    display: none;
+  }
+  .bottom-data-container .header-data__2{
+    margin-top: 0;
   }
 }
-
+@media only screen and (max-width:400px){
+  .bottom-data-container .header-data__1{
+    font-size: 12px;
+  }
+   .bottom-data-container .header-data__2,.content-bottom__ .data-items-bottom{
+    font-size: 10px;
+  }
+}
 
 /* for more menu section */
 .more-menu .close-menu-data:hover{
