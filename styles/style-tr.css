@@ -88,6 +88,20 @@ header{
 }
 .anime-tr.big-items.watch-list-anime{
     height: 300px;
+    margin-inline: auto;
+    animation: popOut 0.2s ease forwards;
+}
+@keyframes popOut {
+    0%{
+        opacity: 0;
+        width: 90%;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        width: 100%;
+    }
 }
 @media only screen and (max-width:600px){
     .anime-tr.big-items{
@@ -483,22 +497,15 @@ h1.main-heading-tr::after{
         grid-template-columns: repeat(3, 1fr);
     }
     .sub-container-r-tr .anime-items-dub-r{
-        width: 50%;
+        width: 100%;
     }
 }
 @media only screen and (max-width:550px){
     .sub-container-l-tr.watch-list-l-tr .sub-sub-container-u, .sub-container-l-tr.sub-container-l-tr.watch-list-l-tr .sub-sub-container-d, .sub-container-l-tr{
         grid-template-columns: repeat(2, 1fr);
     }
-    .sub-container-r-tr .anime-items-dub-r{
-        width: 70%;
-    }
 }
-@media only screen and (max-width:450px){
-    .sub-container-r-tr .anime-items-dub-r{
-        width: 90%;
-    }
-}
+
 
 
 .anime-tr.anime-tr.big-items.first-anime.watch-list-anime .background-anime-tr.watch-list-background-anime-tr{
