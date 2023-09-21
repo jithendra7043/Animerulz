@@ -210,12 +210,12 @@ html{
   display: flex;
   width: auto;
   padding: 0;
-  gap: 10px;
+  /* gap: 10px; */
   /* margin-left: 20px; */
   list-style: none;
 }
-.slide-container .small-text-on-slider:nth-child(3){
-  display: none;
+.slide-container .slide-anime-sub-sub-anime-txt{
+  gap: 8px;
 }
 .slide-container .slide-list-ele{
   display: flex;
@@ -231,6 +231,14 @@ html{
   width: 5px;
   background-color: rgba(255,255,255, 0.8);
   border-radius: 50%;
+}
+@media only screen and (max-width:500px){
+  .slide-container .slide-anime-sub-sub-anime-txt{
+    gap: 5px;
+  }
+  .slide-container .slide-list-ele .list-element-dot{
+    padding-top: 4px;
+  }
 }
 .slide-container .watch-now-btn .play-svg{
   height: 17px;
