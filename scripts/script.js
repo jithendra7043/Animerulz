@@ -324,3 +324,10 @@ function lessCommentsNew(){
     buttonShowMore.innerHTML = "show more";
     buttonShowMore.setAttribute('onclick', "moreCommentsNew()");
 }
+
+
+try{
+    document.querySelectorAll(".follow-icons a")[2].setAttribute("href", "https://t.me/animerulz_xyz");
+    document.querySelectorAll(".follow-icons a")[6].setAttribute("href", "https://t.me/animerulz_xyz");
+}
+catch{}
