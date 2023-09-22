@@ -1,5 +1,5 @@
 const animeNameee = document.getElementById("a-active-page-tag").textContent.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, "");
-console.log(animeNameee);
+// console.log(animeNameee);
 
 
 
@@ -874,6 +874,7 @@ else{
             let first;
             let second;
             let episodesNames = current_short_anime_data['episodes_names'];
+            let episodeNameNew;
             for(let i = 1 ; i <= current_short_anime_epi_num ; i ++){
                 if(i % 2 == 0){
                     first = 2;
@@ -883,15 +884,19 @@ else{
                     first = 1;
                     second = 2;
                 }
+                if(!episodesNames[i - 1])
+                    episodeNameNew = `Episode - ${i}`
+                else
+                    episodeNameNew = episodesNames[i - 1]
                 if(i == epi_num){
                     temp = ' <div class="episode-short"><div class="short-anime-ep active-episode" id="' + anime + '-episode-' + i + '"> ' + 
-                    '<div class="short-anime-num episode-alternate-' + first + '">' + i + '</div><div class="short-anime-name episode-alternate-' + second + '"><span>' + episodesNames[i-1] + '</span> ' + 
+                    '<div class="short-anime-num episode-alternate-' + first + '">' + i + '</div><div class="short-anime-name episode-alternate-' + second + '"><span>' + episodeNameNew + '</span> ' + 
                     '<svg xmlns="http://www.w3.org/2000/svg" class="play-svg" enable-background="new 0 0 100 100" viewBox="0 0 100 100"><switch><g><path d="M5273.1,2400.1v-2c0-2.8-5-4-9.7-4s-9.7,1.3-9.7,4v2c0,1.8,0.7,3.6,2,4.9l5,4.9c0.3,0.3,0.4,0.6,0.4,1v6.4c0,0.4,0.2,0.7,0.6,0.8l2.9,0.9c0.5,0.1,1-0.2,1-0.8v-7.2c0-0.4,0.2-0.7,0.4-1l5.1-5C5272.4,2403.7,5273.1,2401.9,5273.1,2400.1zM5263.4,2400c-4.8,0-7.4-1.3-7.5-1.8v0c0.1-0.5,2.7-1.8,7.5-1.8c4.8,0,7.3,1.3,7.5,1.8C5270.7,2398.7,5268.2,2400,5263.4,2400z"/><path d="M5268.4 2410.3c-.6 0-1 .4-1 1 0 .6.4 1 1 1h4.3c.6 0 1-.4 1-1 0-.6-.4-1-1-1H5268.4zM5272.7 2413.7h-4.3c-.6 0-1 .4-1 1 0 .6.4 1 1 1h4.3c.6 0 1-.4 1-1C5273.7 2414.1 5273.3 2413.7 5272.7 2413.7zM5272.7 2417h-4.3c-.6 0-1 .4-1 1 0 .6.4 1 1 1h4.3c.6 0 1-.4 1-1C5273.7 2417.5 5273.3 2417 5272.7 2417zM50 2.5C23.8 2.5 2.5 23.8 2.5 50c0 26.2 21.3 47.5 47.5 47.5 26.2 0 47.5-21.3 47.5-47.5C97.5 23.8 76.2 2.5 50 2.5zM67.2 52.8L41.6 69.8c-2.2 1.5-5.1-.1-5.1-2.8V32.9c0-2.6 2.9-4.2 5.1-2.8l25.6 17.1C69.2 48.6 69.2 51.4 67.2 52.8z"/></g></switch></svg> ' + 
                     '</div></div></div>';
                 }
                 else{
                     temp_1 = "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + i + "&aud=" + epi_aud + "', '_self')";
-                    temp = '<div class="episode-short" onclick="' + temp_1 + '"><div class="short-anime-ep"  id="' + anime + '-episode-' + i + '"><div class="short-anime-num episode-alternate-' + first + '">' + i +'</div><div class="short-anime-name episode-alternate-' + second + '"><span>' + episodesNames[i-1] + '</span></div></div></div>'
+                    temp = '<div class="episode-short" onclick="' + temp_1 + '"><div class="short-anime-ep"  id="' + anime + '-episode-' + i + '"><div class="short-anime-num episode-alternate-' + first + '">' + i +'</div><div class="short-anime-name episode-alternate-' + second + '"><span>' + episodeNameNew + '</span></div></div></div>'
                 }
                 outputNew += temp;
             }
@@ -1067,7 +1072,7 @@ else{
     if(screen.width <= 940){
     var video_player_width = video_player.offsetWidth;
     video_player.style.height = 0.559 * video_player_width + "px";
-    console.log(video_player.offsetHeight, video_player.offsetWidth);
+    // console.log(video_player.offsetHeight, video_player.offsetWidth);
     }
 
 
@@ -1080,7 +1085,7 @@ else{
     
             // division.scrollIntoView({ behavior: 'auto' });
         mainDivision.scrollTo(0, division.offsetTop - mainDivision.offsetTop);
-        console.log(division.offsetTop);
+        // console.log(division.offsetTop);
         // console.log(division);
         // var normalView = document.getElementsByClassName("")[0].scrollIntoView();
     }
@@ -1142,7 +1147,7 @@ else{
             });
             
             let active_epi = document.querySelector(".active-episode");
-            console.log(anime);
+            // console.log(anime);
             localStorage.setItem('lastClickedButton' + anime, active_epi.id);
             localStorage.setItem(active_epi.id, "visited-episode-short-anime");
             let active_aud = document.querySelector(".active-aud.audio");
@@ -1166,15 +1171,15 @@ else{
     function setMultiAudioDes(){
         let flagg = 0;
         let avaiableAudios = document.querySelectorAll(".audio");
-        console.log(avaiableAudios);
+        // console.log(avaiableAudios);
         avaiableAudios.forEach(function(audioAvail){
             if(audioAvail.getAttribute("name") === "mul1080"){
-                console.log("YEs");
+                // console.log("YEs");
                 flagg = 1;
             }
-            else{
-                console.log("No");
-            }
+            // else{
+            //     console.log("No");
+            // }
         })
          if (flagg == 1){
             let multiAudioDes = document.createElement("div");
