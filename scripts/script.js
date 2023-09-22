@@ -123,7 +123,7 @@ function change_dub(n){
 
 
 function setAnimeInWatchList(){
-    let watchListButton = document.getElementsByClassName("button-read-manga")[0];
+    try{let watchListButton = document.getElementsByClassName("button-read-manga")[0];
     let animesInWatchList = localStorage.getItem("watchList");
     let animeName = document.getElementsByTagName("h1")[0].textContent;
 
@@ -136,7 +136,8 @@ function setAnimeInWatchList(){
                 watchListButton.setAttribute("onclick", "window.open('https://animerulz.in/watchlist', '_self')");
             }
         })
-    }
+    }}
+    catch{}
 }
 
 setTimeout(setAnimeInWatchList, 500);
