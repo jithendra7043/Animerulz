@@ -2606,7 +2606,7 @@ body{
     right: 0;
   }
 }
-.scroll-to-top-div a{
+.scroll-to-top-div .scroll-to-topp{
   all: unset;
   font-size: 20px;
   text-align: center;
