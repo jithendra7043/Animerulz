@@ -20,7 +20,7 @@ function setContinueWatchingContainer(){
             else
                animeEpisodeNumberForHome = 1;
             tempData += `<div class="anime-continue-watching">
-                  <a class="anchor-to-continue-watching" title="Continue Watching One Piece" href="${continueWatchingData[i].animeUrl}Watch-Now/?ep=${animeEpisodeNumberForHome}&aud=eng">
+                  <a class="anchor-to-continue-watching" title="Continue Watching ${animeNameForHome}" href="${continueWatchingData[i].animeUrl}Watch-Now/?ep=${animeEpisodeNumberForHome}&aud=eng">
                      <div class="data_cont-watching__" style="background: url(${continueWatchingData[i].animeImage}) no-repeat center center;background-size: 100% auto;">
                         <div class="play-btn__">
                            <i class="fa-regular fa-circle-play"></i>
@@ -58,4 +58,5 @@ function setContinueWatchingContainer(){
     }
 }
 
-setContinueWatchingContainer();
+if(localStorage.continueWatching)
+   setContinueWatchingContainer();
