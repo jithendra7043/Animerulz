@@ -11,12 +11,25 @@ window.addEventListener("load", function(){
         catch{}
     }
 
-//for navbar
-document.getElementsByClassName("scroll-to-top-div")[0].setAttribute("onclick", "scrollToTopDiv()");
+//for  clearing continue watching data
+if(localStorage.clearContinueWatching == undefined){
+    localStorage.clear("continueWatching");
+    localStorage.setItem("clearContinueWatching", "True");
+}
+//for scroller to top
+const scrollDivToTop_ = document.getElementsByClassName("scroll-to-top-div")[0];
+scrollDivToTop_.setAttribute("onclick", "scrollToTopDiv()");
+scrollDivToTop_.innerHTML = `<div class="scroll-to-topp">
+<i class="fa-solid fa-angle-up"></i>
+</div>`;
+
 
 function scrollToTopDiv(){
-    document.getElementsByTagName("nav")[0].scrollIntoView();
+    document.getElementById("main").scrollIntoView();
 }
+
+
+//for navbar
 function nav_bar_cust(){
     let old_nav;
     let new_nav = 0;
@@ -154,7 +167,7 @@ function addAnimeToList(){
     // notificationContainer.style.opactiy = "1 !important";
     watchListButton.textContent = "View Watch List";
     watchListButton.setAttribute("onclick", "window.open('https://animerulz.in/WatchList/', '_self')");
-    let animeLink = window.location.href;
+    let animeLink = window.location.href.split("#")[0];
     let animeName = document.getElementsByTagName("h1")[0].textContent;
     let animeImageUrl = document.getElementsByClassName("image-in-container-image-div")[0].getAttribute("src");
 
@@ -205,7 +218,7 @@ function removeNotificationContainer(){
 function addAnimeToQueue(){
     let animeImage__ = document.getElementsByClassName("image-in-container-image-div")[0].getAttribute("src");
     let animeName__ = document.getElementsByTagName("h1")[0].textContent;
-    let animeUrl__ = window.location.href;
+    let animeUrl__ = window.location.href.split("#")[0];
     // console.log(animeUrl__);
 
     if(localStorage.continueWatching == undefined){
