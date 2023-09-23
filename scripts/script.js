@@ -345,3 +345,4 @@ try{
     document.querySelectorAll(".follow-icons a")[6].setAttribute("href", "https://t.me/animerulz_xyz");
 }
 catch{}
+
