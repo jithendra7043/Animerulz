@@ -218,8 +218,7 @@ function removeNotificationContainer(){
 function addAnimeToQueue(){
     let animeImage__ = document.getElementsByClassName("image-in-container-image-div")[0].getAttribute("src");
     let animeName__ = document.getElementById("active-page-tag").textContent;
-    let animeUrl__ = window.location.href.split("#")[0];
-    // console.log(animeUrl__);
+    let animeUrl__ = window.location.href;
 
     if(localStorage.continueWatching == undefined){
         let animeDataCV = [
