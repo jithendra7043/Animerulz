@@ -217,7 +217,7 @@ function removeNotificationContainer(){
 //for continue watching anime in home page
 function addAnimeToQueue(){
     let animeImage__ = document.getElementsByClassName("image-in-container-image-div")[0].getAttribute("src");
-    let animeName__ = document.getElementsByTagName("h1")[0].textContent;
+    let animeName__ = document.getElementById("active-page-tag").textContent;
     let animeUrl__ = window.location.href.split("#")[0];
     // console.log(animeUrl__);
 
@@ -345,4 +345,3 @@ try{
     document.querySelectorAll(".follow-icons a")[6].setAttribute("href", "https://t.me/animerulz_xyz");
 }
 catch{}
-
