@@ -464,7 +464,7 @@ else
 
             multiAudioDes.setAttribute("class", "audio-container-multi-audio-des");
 
-            multiAudioDes.innerText = "Multi Audio has Hindi, Telugu, Tamil, Malayalam, Bengali - Use 🎧 in Video to change audio track.";
+            multiAudioDes.innerHTML = "<span class='multi-text-high'>Multi</span> Audio has Hindi, Telugu, Tamil, Malayalam, Bengali - Use 🎧 in Video to change audio track.";
           
             document.getElementsByClassName("audio-container")[0].appendChild(multiAudioDes);
         }
@@ -516,14 +516,14 @@ else if(shortAnimes.includes(animeNameee)){
             var episodes_section = document.getElementById("episodes-in-section");
             let short_anime_data = JSON.parse(this.responseText);
             let current_short_anime_data = short_anime_data[anime.textContent];
-            console.log(current_short_anime_data);
+            // console.log(current_short_anime_data);
             anime = anime.textContent.replace(/[^a-zA-Z0-9]/g, "");
             let current_short_anime_epi_num = current_short_anime_data['jap']['no_epi'];
             let temp = "";
             let temp_1 = "";
             let outputNew = "";
             let first;
-            let second;
+            let second; 
             let episodesNames = current_short_anime_data['episodes_names'];
             let episodeNameNew;
             for(let i = 1 ; i <= current_short_anime_epi_num ; i ++){
@@ -570,7 +570,7 @@ else if(shortAnimes.includes(animeNameee)){
                     newEpiNum = "" + epi_num
                 else
                     newEpiNum = (" " +  epi_num ).replace(" ", "");
-                console.log(newEpiNum);
+                // console.log(newEpiNum);
                 if(current_short_anime_data['mul'][newEpiNum]){
                     if(current_short_anime_data['mul'][newEpiNum]['mul'])
                         outputNew += "<div class='audio' name='mul'>Multi</div>";
@@ -726,7 +726,7 @@ else if(shortAnimes.includes(animeNameee)){
     
             // division.scrollIntoView({ behavior: 'auto' });
         mainDivision.scrollTo(0, division.offsetTop - mainDivision.offsetTop);
-        console.log(division.offsetTop);
+        // console.log(division.offsetTop);
         // console.log(division);
         // var normalView = document.getElementsByClassName("")[0].scrollIntoView();
     }
@@ -745,7 +745,7 @@ else if(shortAnimes.includes(animeNameee)){
             localStorage.setItem('lastClickedButton' + anime , event.target.id);
             let temporaryDataVar1 = localStorage.getItem('continueWatching');
         let temporaryDataVar = JSON.parse(temporaryDataVar1);
-        console.log(temporaryDataVar);
+        // console.log(temporaryDataVar);
         let animeDataNew;
         let lastIndex = temporaryDataVar.length - 1
         animeDataNew = {
@@ -788,7 +788,7 @@ else if(shortAnimes.includes(animeNameee)){
             });
             
             let active_epi = document.querySelector(".active-episode");
-            console.log(anime);
+            // console.log(anime);
             localStorage.setItem('lastClickedButton' + anime, active_epi.id);
             localStorage.setItem(active_epi.id, "visited-episode-short-anime");
             let active_aud = document.querySelector(".active-aud.audio");
@@ -810,14 +810,11 @@ else if(shortAnimes.includes(animeNameee)){
     function setMultiAudioDes(){
         let flagg = 0;
         let avaiableAudios = document.querySelectorAll(".audio");
-        console.log(avaiableAudios);
+        // console.log(avaiableAudios);
         avaiableAudios.forEach(function(audioAvail){
             if(audioAvail.getAttribute("name") === "mul1080"){
-                console.log("YEs");
+                // console.log("YEs");
                 flagg = 1;
-            }
-            else{
-                console.log("No");
             }
         })
          if (flagg == 1){
@@ -825,7 +822,7 @@ else if(shortAnimes.includes(animeNameee)){
 
             multiAudioDes.setAttribute("class", "audio-container-multi-audio-des");
 
-            multiAudioDes.innerText = "Multi Audio has Hindi, Telugu, Tamil, Malayalam, Bengali - Use 🎧 in Video to change audio track.";
+            multiAudioDes.innerHTML = "<span class='multi-text-high'>Multi</span> Audio has Hindi, Telugu, Tamil, Malayalam, Bengali - Use 🎧 in Video to change audio track.";
           
             document.getElementsByClassName("audio-container")[0].appendChild(multiAudioDes);
         }
@@ -1042,8 +1039,11 @@ else{
                 let current_short_anime_data_video_link = current_short_anime_data[epi_aud]['link'];
                 video_player.setAttribute("src", current_short_anime_data_video_link + epi_num);  
             }else if(epi_aud == "eng"){
-                let current_short_anime_data_video_link = current_short_anime_data[epi_aud]['link'];
-                video_player.setAttribute("src", current_short_anime_data_video_link + epi_num);  
+                try{
+                    let current_short_anime_data_video_link = current_short_anime_data[epi_aud]['link'];
+                    video_player.setAttribute("src", current_short_anime_data_video_link + epi_num);  
+                }
+                catch{}
             } 
             else{
                 let activeAudName = document.getElementsByClassName("active-aud")[0].getAttribute("name");
@@ -1186,11 +1186,26 @@ else{
 
             multiAudioDes.setAttribute("class", "audio-container-multi-audio-des");
 
-            multiAudioDes.innerText = "Multi Audio has Hindi, Telugu, Tamil, Malayalam, Bengali - Use 🎧 in Video to change audio track.";
+            multiAudioDes.innerHTML = "<span class='multi-text-high'>Multi</span> Audio has Hindi, Telugu, Tamil, Malayalam, Bengali - Use 🎧 in Video to change audio track.";
           
             document.getElementsByClassName("audio-container")[0].appendChild(multiAudioDes);
         }
     }
 
     setTimeout(setMultiAudioDes, 1000);
+
+
+    setTimeout(hideEngJapAud, 2000);
+    function hideEngJapAud(){
+        if(animeNameee == "one piece live action"){
+            let audioButtons = document.getElementsByClassName("audio");
+            try{
+                audioButtons[audioButtons.length - 1].style.display = "none";
+                audioButtons[audioButtons.length - 2].style.display = "none";
+            }
+            catch{
+                setTimeout(1000, hideEngJapAud);
+            }
+        }
+    }
 }
