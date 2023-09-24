@@ -12,9 +12,9 @@ window.addEventListener("load", function(){
     }
 
 //for  clearing continue watching data
-if(localStorage.clearContinueWatching == undefined){
+if(localStorage.clearContinueWatching1 == undefined){
     localStorage.clear("continueWatching");
-    localStorage.setItem("clearContinueWatching", "True");
+    localStorage.setItem("clearContinueWatching1", "True");
 }
 //for scroller to top
 const scrollDivToTop_ = document.getElementsByClassName("scroll-to-top-div")[0];
@@ -225,8 +225,6 @@ function addAnimeToQueue(){
             {
                 animeName : animeName__,
                 animeImage : animeImage__,
-                animeUrl : animeUrl__,
-                animeEpisodeNumber : 1
             }
         ];
 
@@ -235,8 +233,6 @@ function addAnimeToQueue(){
         let animeDataCV = {
             animeName : animeName__,
             animeImage : animeImage__,
-            animeUrl : animeUrl__,
-            animeEpisodeNumber : 1
         };
         let existingAnimeData = localStorage.getItem("continueWatching");
 
