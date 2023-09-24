@@ -421,6 +421,13 @@ iframe{
     -webkit-box-orient: vertical;
     overflow: hidden;
   color: #faa300;
+  color: rgba(255, 255, 255, 0.8);
+}
+.audio-container-multi-audio-des .multi-text-high{
+  padding:2px 5px;
+  border-radius: 5px;
+  background-color: #faa300;
+  color: rgba(0, 0, 0, 0.8);
 }
 @media only screen and (max-width:600px){
   .audios{
