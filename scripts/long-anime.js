@@ -975,7 +975,7 @@ else{
             catch{
                 let anime_audios = document.getElementsByClassName("audio")[0];
                 temp = "https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=" + anime_audios.getAttribute("name") ;
-                alert("It's Me");
+                // alert("It's Me");
                 window.open(temp, "_self");
             }
             try{
