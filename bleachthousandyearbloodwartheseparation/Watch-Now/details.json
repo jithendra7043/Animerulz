@@ -1,32 +1,30 @@
 {
     "jap": {
-        "no_epi": "10",
+        "no_epi": "11",
         "link": "https://player.ryuk.to?id=bleach-sennen-kessen-hen-ketsubetsu-tan-episode-",
-        "down_links": [
-            "MjA3ODQ4",
-            "MjA4Mjg2",
-            "MjA4NjIw",
-            "MjA5MTY4",
-            "MjA5NjEy",
-            "MjA5OTY4",
-            "MjEwMzc3",
-            "MjEwODAz",
-            "MjExNjQ1",
-            "MjEyMDQ2"
-        ]
+        "down_links": ["MjA3ODQ4",
+                    "MjA4Mjg2",
+                    "MjA4NjIw",
+                    "MjA5MTY4",
+                    "MjA5NjEy",
+                    "MjA5OTY4",
+                    "MjEwMzc3",
+                    "MjEwODAz",
+                    "MjExNjQ1",
+                    "MjEyMDQ2",
+                    "MjEyMzc4"]
     },
     "eng": {
-        "no_epi": "7",
+        "no_epi": "8",
         "link": "https://player.ryuk.to?id=bleach-sennen-kessen-hen-ketsubetsu-tan-dub-episode-",
-        "down_links": [
-            "MjA5NzE2",
-            "MjA5OTY5",
-            "MjEwMzc4",
-            "MjExMDI1",
-            "MjExMTI5",
-            "MjExNDM0",
-            "MjEyMDQ0"
-        ]
+        "down_links":["MjA5NzE2",
+                    "MjA5OTY5",
+                    "MjEwMzc4",
+                    "MjExMDI1",
+                    "MjExMTI5",
+                    "MjExNDM0",
+                    "MjEyMDQ0",
+                    "MjEyMzk0"]
     },
     "episodes_names": [
         "The Last 9 Days",
