@@ -61,6 +61,13 @@ html{
   position: absolute;
   z-index: -1;
 }
+.preloader-for-video-episodes-section{
+  z-index: 100;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 iframe{
   background-color: rgba(0, 0, 0, 0);
 }
@@ -80,16 +87,23 @@ iframe{
   margin-left: auto;
   margin-right: auto;
   margin-top: 20%;
-  /* margin: auto; */
   position: relative;
 }
 .spinner-box {
   width: 150px;
   height: 150px;
-  /* display: flex; */
   margin-left: auto;
   margin-right: auto;
   margin-top: 150px;
+  background-color: transparent;
+}
+.spinner-box_{
+  width: 150px;
+  height: 150px;
+  /* display: flex; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 250px;
   background-color: transparent;
 }
 .circle-border {
@@ -100,8 +114,7 @@ iframe{
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: rgb(63,249,220);
-  background: linear-gradient(0deg, rgba(63,249,220,0.1) 33%, rgba(63,249,220,1) 100%);
+  background: linear-gradient(0deg, rgba(250, 160, 0, 0.1) 33%, rgba(250,160,0,1) 100%);
   animation: spin .8s linear 0s infinite;
 }
 .circle-core {
@@ -110,13 +123,22 @@ iframe{
   background-color: #1d2630;
   border-radius: 50%;
 }
+.circle-core_ {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+}
 @media only screen and (max-width:600px){
-  .circle-border,.spinner-box{
+  .circle-border,.spinner-box, .spinner-box_{
     height: 100px;
     width: 100px;
   }
   .spinner-box{
     margin-top: 100px;
+}
+.spinner-box_{
+  margin-top: 200px;
 }
 }
 @keyframes spin {
@@ -196,6 +218,7 @@ iframe{
   color: white;
   /* overflow-y: scroll; */
   background-color: rgba(0,0,0,0.8);
+  position: relative;
   /* padding-left: 10px; */
 }
 /* .main-container-video-sec-1{
@@ -269,7 +292,7 @@ iframe{
   rotate: 180deg;
   transition: rotate 1s;
 }
-.main-container-video-sec-2 .header,.main-container-video-sec-2 body{
+.main-container-video-sec-2 .header,.main-container-video-sec-2 .body{
   padding-left: 10px;
 }
 .main-container-video-sec-2 .body .body-cont{
@@ -277,6 +300,7 @@ iframe{
   background-color: rgba(0,0,0,0.5);
   width: 96%;
   padding-top: 15px;
+  height: 100%;
 }
 .main-container-video-sec-2 .body .body-cont .content{
   display: grid;
@@ -287,6 +311,7 @@ iframe{
   /* flex-wrap: wrap; */
   /* justify-content: space-evenly; */
   overflow-y: scroll;
+  height: 100%;
   max-height: 550px;
   width: 95%;
   margin-left: auto;
@@ -361,6 +386,7 @@ iframe{
   background-color: rgba(0, 0, 0, 0.8);
   margin: 0;
   min-height: 110px;
+  padding-block: 5px;
 }
 .video-number{
   background-color: #faa300;
@@ -838,4 +864,9 @@ iframe{
   /* display: none; */
   width: 5px;
 }
+}
+
+
+#episodes-in-section{
+  position: relative;
 }
