@@ -158,7 +158,10 @@ long_anime_file.onload = function(){
             outputNew += temp;
         }
         episodes_section.innerHTML = outputNew;
-
+        try{
+            document.getElementsByClassName("preloader-for-video-episodes-section")[0].style.display = "none";
+        }
+        catch{}
         var tempNew;
         outputNew = "";
         let i = 1;
@@ -250,6 +253,7 @@ long_anime_file.onload = function(){
             }
             catch{};
             audios_div.innerHTML = outputNew;
+            setMultiAudioDes();
         }
         try{
             document.getElementsByName(epi_aud)[0].classList.add("active-aud");
@@ -464,14 +468,10 @@ else
     function setMultiAudioDes(){
         let flagg = 0;
         let avaiableAudios = document.querySelectorAll(".audio");
-        console.log(avaiableAudios);
+        // console.log(avaiableAudios);
         avaiableAudios.forEach(function(audioAvail){
             if(audioAvail.getAttribute("name") === "mul1080"){
-                console.log("YEs");
                 flagg = 1;
-            }
-            else{
-                console.log("No");
             }
         })
          if (flagg == 1){
@@ -485,7 +485,6 @@ else
         }
     }
 
-    setTimeout(setMultiAudioDes, 1000);
     
 }
 
@@ -567,6 +566,10 @@ else if(shortAnimes.includes(animeNameee)){
                 outputNew += temp;
             }
             episodes_section.innerHTML = outputNew;
+            try{
+                document.getElementsByClassName("preloader-for-video-episodes-section")[0].style.display = "none";
+            }
+            catch{}
 
             if(epi_num != 1)
                 document.getElementsByClassName("button-1")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (epi_num - 1) + "&aud=" + epi_aud + "', '_self')"); 
@@ -630,6 +633,7 @@ else if(shortAnimes.includes(animeNameee)){
                 }
                 catch{};
                 audios_div.innerHTML = outputNew ;
+                setMultiAudioDes();
             }
             try{
                 document.getElementsByName(epi_aud)[0].classList.add("active-aud");
@@ -859,7 +863,6 @@ else if(shortAnimes.includes(animeNameee)){
         }
     }
 
-    setTimeout(setMultiAudioDes, 1000);
 }
 
 
@@ -929,6 +932,10 @@ else{
                 outputNew += temp;
             }
             episodes_section.innerHTML = outputNew;
+            try{
+                document.getElementsByClassName("preloader-for-video-episodes-section")[0].style.display = "none";
+            }
+            catch{}
 
             if(epi_num != 1)
                 document.getElementsByClassName("button-1")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (epi_num - 1) + "&aud=" + epi_aud + "', '_self')"); 
@@ -999,6 +1006,7 @@ else{
                 }
                 catch{};
                 audios_div.innerHTML = outputNew;
+                setMultiAudioDes();
             }
             try{
                 document.getElementsByName(epi_aud)[0].classList.add("active-aud");
@@ -1241,7 +1249,6 @@ else{
         }
     }
 
-    setTimeout(setMultiAudioDes, 1000);
 
 
     setTimeout(hideEngJapAud, 2000);
