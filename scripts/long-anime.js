@@ -34,7 +34,6 @@ const shortAnimes = ['demon slayer kimetsu no yaiba',
 'attack on titan final season part 2',
 'attack on titan final season part 3',
 'my hero academia',
-'my hero academia 2',
 'my hero academia season 3',
 'my hero academia season 4',
 'my hero academia season 5',
@@ -1259,4 +1258,3 @@ else{
         }
     }
 }
-
