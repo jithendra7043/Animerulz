@@ -7,13 +7,15 @@ const redirectThis = [
     "myheroacademiaseason2",
     "Naruto",
     "MyHeroAcademia",
-    "DragonBallSuper"
+    "DragonBallSuper",
+    "jujutsukaisenseason2"
 ]
 const redirectTo = [
     "myheroacademia2",
     "naruto",
     "myheroacademia",
-    "dragonballsuper"
+    "dragonballsuper",
+    "jujutsukaisen2ndseason"
 ]
 
 for(let i = 1; i <= redirectThis.length ; i ++){
