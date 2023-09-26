@@ -34,7 +34,7 @@ const shortAnimes = ['demon slayer kimetsu no yaiba',
 'attack on titan final season part 2',
 'attack on titan final season part 3',
 'my hero academia',
-'my hero academia season 2',
+'my hero academia 2',
 'my hero academia season 3',
 'my hero academia season 4',
 'my hero academia season 5',
@@ -426,7 +426,10 @@ else
             }
         });
         
-        let active_epi = document.querySelector(".active.episode");
+        let active_epi_ = document.querySelector(".active-episode");
+            let active_epi
+            if(active_epi_ == null)
+                active_epi = getActiveEpisode();
         // console.log(anime);
         localStorage.setItem('lastClickedButton' + anime, active_epi.id);
         localStorage.setItem(active_epi.id, "visited-episode");
@@ -444,6 +447,15 @@ else
     }
 
       setTimeout(setEpisodesData, 500);
+
+    //to get active episode
+    function getActiveEpisode(){
+        let active_epi__ = document.querySelector(".active-episode");
+        if(active_epi__ != null)
+            return active_epi__
+        else
+            return getActiveEpisode();
+    }
 
     // for setting description about multi audio
     function setMultiAudioDes(){
@@ -787,8 +799,10 @@ else if(shortAnimes.includes(animeNameee)){
                 }
             });
             
-            let active_epi = document.querySelector(".active-episode");
-            // console.log(anime);
+            let active_epi_ = document.querySelector(".active-episode");
+            let active_epi
+            if(active_epi_ == null)
+                active_epi = getActiveEpisode();            // console.log(anime);
             localStorage.setItem('lastClickedButton' + anime, active_epi.id);
             localStorage.setItem(active_epi.id, "visited-episode-short-anime");
             let active_aud = document.querySelector(".active-aud.audio");
@@ -805,6 +819,15 @@ else if(shortAnimes.includes(animeNameee)){
         }
 
         setTimeout(setEpisodesData, 500);
+
+        //to get active episode
+        function getActiveEpisode(){
+            let active_epi__ = document.querySelector(".active-episode");
+            if(active_epi__ != null)
+                return active_epi__
+            else
+                return getActiveEpisode();
+        }
 
         // for setting description about multi audio
     function setMultiAudioDes(){
@@ -1085,7 +1108,10 @@ else{
             // console.log(division);
     
             // division.scrollIntoView({ behavior: 'auto' });
-        mainDivision.scrollTo(0, division.offsetTop - mainDivision.offsetTop);
+            try{
+            mainDivision.scrollTo(0, division.offsetTop - mainDivision.offsetTop);
+            }
+            catch{}
         // console.log(division.offsetTop);
         // console.log(division);
         // var normalView = document.getElementsByClassName("")[0].scrollIntoView();
@@ -1147,7 +1173,10 @@ else{
                 }
             });
             
-            let active_epi = document.querySelector(".active-episode");
+            let active_epi_ = document.querySelector(".active-episode");
+            let active_epi
+            if(active_epi_ == null)
+                active_epi = getActiveEpisode();
             // console.log(anime);
             localStorage.setItem('lastClickedButton' + anime, active_epi.id);
             localStorage.setItem(active_epi.id, "visited-episode-short-anime");
@@ -1165,7 +1194,16 @@ else{
         }
 
         setTimeout(setEpisodesData, 500);
+        
 
+        //to get active episode
+        function getActiveEpisode(){
+            let active_epi__ = document.querySelector(".active-episode");
+            if(active_epi__ != null)
+                return active_epi__
+            else
+                return getActiveEpisode();
+        }
 
 
         // for setting description about multi audio
