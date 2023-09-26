@@ -359,8 +359,10 @@ function scrollToDiv() {
         // console.log(division);
   
         // division.scrollIntoView({ behavior: 'auto' });
-      mainDivision.scrollTo(0, division.offsetTop - mainDivision.offsetTop);
-    //   console.log(division.offsetTop);
+        try{
+            mainDivision.scrollTo(0, division.offsetTop - mainDivision.offsetTop);
+            }
+            catch{}    //   console.log(division.offsetTop);
     // console.log(division);
       // var normalView = document.getElementsByClassName("")[0].scrollIntoView();
   }
@@ -426,10 +428,11 @@ else
             }
         });
         
-        let active_epi_ = document.querySelector(".active-episode");
-            let active_epi
-            if(active_epi_ == null)
-                active_epi = getActiveEpisode();
+        try{
+            let active_epi = document.querySelector(".active-episode");
+            // let active_epi
+            // if(active_epi_ == null)
+            //     active_epi = getActiveEpisode();
         // console.log(anime);
         localStorage.setItem('lastClickedButton' + anime, active_epi.id);
         localStorage.setItem(active_epi.id, "visited-episode");
@@ -443,7 +446,8 @@ else
             var lastClickedButton1 = document.getElementById(lastClickedButtonId);
             lastClickedButton1.classList.add("visited-episode");
         }
-        // active_aud.style.backgroundColor = "#faa300";
+        }
+        catch{}
     }
 
       setTimeout(setEpisodesData, 500);
@@ -737,8 +741,10 @@ else if(shortAnimes.includes(animeNameee)){
             // console.log(division);
     
             // division.scrollIntoView({ behavior: 'auto' });
-        mainDivision.scrollTo(0, division.offsetTop - mainDivision.offsetTop);
-        // console.log(division.offsetTop);
+            try{
+                mainDivision.scrollTo(0, division.offsetTop - mainDivision.offsetTop);
+                }
+                catch{}        // console.log(division.offsetTop);
         // console.log(division);
         // var normalView = document.getElementsByClassName("")[0].scrollIntoView();
     }
@@ -799,10 +805,11 @@ else if(shortAnimes.includes(animeNameee)){
                 }
             });
             
-            let active_epi_ = document.querySelector(".active-episode");
-            let active_epi
-            if(active_epi_ == null)
-                active_epi = getActiveEpisode();            // console.log(anime);
+            try{
+                let active_epi = document.querySelector(".active-episode");
+            // let active_epi;
+            // if(active_epi_ == null)
+            //     active_epi = getActiveEpisode();            
             localStorage.setItem('lastClickedButton' + anime, active_epi.id);
             localStorage.setItem(active_epi.id, "visited-episode-short-anime");
             let active_aud = document.querySelector(".active-aud.audio");
@@ -815,7 +822,8 @@ else if(shortAnimes.includes(animeNameee)){
                 var lastClickedButton1 = document.getElementById(lastClickedButtonId);
                 lastClickedButton1.classList.add("visited-episode-short-anime");
             }
-            // active_aud.style.backgroundColor = "#faa300";
+            }
+            catch{}
         }
 
         setTimeout(setEpisodesData, 500);
@@ -823,10 +831,11 @@ else if(shortAnimes.includes(animeNameee)){
         //to get active episode
         function getActiveEpisode(){
             let active_epi__ = document.querySelector(".active-episode");
-            if(active_epi__ != null)
-                return active_epi__
-            else
+            console.log(active_epi__);
+            if(active_epi__ == null)
                 return getActiveEpisode();
+            else
+                return active_epi__
         }
 
         // for setting description about multi audio
@@ -1173,10 +1182,11 @@ else{
                 }
             });
             
-            let active_epi_ = document.querySelector(".active-episode");
-            let active_epi
-            if(active_epi_ == null)
-                active_epi = getActiveEpisode();
+            try{
+                let active_epi = document.querySelector(".active-episode");
+            // let active_epi
+            // if(active_epi_ == null)
+            //     active_epi = getActiveEpisode();
             // console.log(anime);
             localStorage.setItem('lastClickedButton' + anime, active_epi.id);
             localStorage.setItem(active_epi.id, "visited-episode-short-anime");
@@ -1190,7 +1200,8 @@ else{
                 var lastClickedButton1 = document.getElementById(lastClickedButtonId);
                 lastClickedButton1.classList.add("visited-episode-short-anime");
             }
-            // active_aud.style.backgroundColor = "#faa300";
+            }
+            catch{}
         }
 
         setTimeout(setEpisodesData, 500);
