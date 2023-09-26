@@ -25,7 +25,7 @@ function setContinueWatchingContainer(){
             console.log(animeNameForHome.replace(/[^a-zA-Z0-9]/g, "").toLowerCase());
             tempData += `<div class="anime-continue-watching">
                   <a class="anchor-to-continue-watching" title="Continue Watching ${animeNameForHome}" href="../${animeNameForHome.replace(/[^a-zA-Z0-9]/g, "").toLowerCase()}/Watch-Now/?ep=${animeEpisodeNumberForHome}&aud=${lastClickedAudioButtonForHome}">
-                     <div class="data_cont-watching__" style="background: url("${continueWatchingData[i].animeImage}") no-repeat center center;background-size: 100% auto;">
+                     <div class="data_cont-watching__" style="background: url('${continueWatchingData[i].animeImage}') no-repeat center center;background-size: 100% auto;">
                         <div class="play-btn__">
                            <i class="fa-regular fa-circle-play"></i>
                         </div>
