@@ -64,3 +64,4 @@ function setContinueWatchingContainer(){
 
 if(localStorage.continueWatching)
    setContinueWatchingContainer();
+
