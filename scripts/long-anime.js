@@ -110,6 +110,12 @@ if(longAnimes.includes(animeNameee))
       video_container.prepend(element);
       video_container.getElementsByTagName("div")[0].setAttribute("class", "preloader-for-video");
       document.getElementsByClassName("preloader-for-video")[0].innerHTML = '<div class="preloader-for-video"><div class="spinner-box"><div class="circle-border"><div class="circle-core"></div></div>  </div></div>';
+    //for setting preloader for episodes section
+    let episodesContainer_ = document.getElementsByClassName("main-container-video-sec-2")[0];
+    let newElement = document.createElement("div");
+    newElement.setAttribute("class", "preloader-for-video-episodes-section");
+    newElement.innerHTML = `<div class="spinner-box_"><div class="circle-border"><div class="circle-core_"></div></div>  </div>`;
+    episodesContainer_.prepend(newElement);
 
 const key_value_from_url = window.location.search;
 const urlParams = new URLSearchParams(key_value_from_url);
@@ -511,7 +517,12 @@ else if(shortAnimes.includes(animeNameee)){
       video_container.prepend(element);
       video_container.getElementsByTagName("div")[0].setAttribute("class", "preloader-for-video");
       document.getElementsByClassName("preloader-for-video")[0].innerHTML = '<div class="preloader-for-video"><div class="spinner-box"><div class="circle-border"><div class="circle-core"></div></div>  </div></div>';    
-    
+    //for setting preloader for episodes section
+    let episodesContainer_ = document.getElementsByClassName("main-container-video-sec-2")[0];
+    let newElement = document.createElement("div");
+    newElement.setAttribute("class", "preloader-for-video-episodes-section");
+    newElement.innerHTML = `<div class="spinner-box_"><div class="circle-border"><div class="circle-core_"></div></div>  </div>`;
+    episodesContainer_.prepend(newElement);
     
     const key_value_from_url = window.location.search;
     const urlParams = new URLSearchParams(key_value_from_url);
@@ -877,7 +888,12 @@ else{
       video_container.prepend(element);
       video_container.getElementsByTagName("div")[0].setAttribute("class", "preloader-for-video");
       document.getElementsByClassName("preloader-for-video")[0].innerHTML = '<div class="preloader-for-video"><div class="spinner-box"><div class="circle-border"><div class="circle-core"></div></div>  </div></div>';    
-    
+    //for setting preloader for episodes section
+    let episodesContainer_ = document.getElementsByClassName("main-container-video-sec-2")[0];
+    let newElement = document.createElement("div");
+    newElement.setAttribute("class", "preloader-for-video-episodes-section");
+    newElement.innerHTML = `<div class="spinner-box_"><div class="circle-border"><div class="circle-core_"></div></div>  </div>`;
+    episodesContainer_.prepend(newElement);
     
     const key_value_from_url = window.location.search;
     const urlParams = new URLSearchParams(key_value_from_url);
