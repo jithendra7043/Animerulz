@@ -986,7 +986,7 @@
         },
         "episodes_names" : ["Izuku Midoriya: Origin", "What It Takes to Be a Hero", "Roaring Muscles", "Start Line", "What I Can Do For Now", "Rage, You Damn Nerd", "Deku vs. Kacchan", "Bakugos Start Line", "Yeah, Just Do Your Best, Iida!", "Encounter with the Unknown", "Game Over", "All Might", "Upon Each of Their Hearts"]
     },
-    "My Hero Academia Season 2" : {
+    "My Hero Academia 2" : {
         "jap" : {
             "no_epi" : 25,
             "link" : "https://player.ryuk.to?id=boku-no-hero-academia-2nd-season-episode-",
@@ -1047,6 +1047,14 @@
             "https://gotaku1.com/download?id=MTAxMzUz&typesub=Animerulz Anime-DUB&title=Boku+no+Hero+Academia+2nd+Season+%28Dub%29+Episode+24",
             "https://gotaku1.com/download?id=MTAxNDc0&typesub=Animerulz Anime-DUB&title=Boku+no+Hero+Academia+2nd+Season+%28Dub%29+Episode+25"]
         },
+        "mul" : {
+            "01": {"h": "pvkpllxip04r", "l": "t19jj0kunt15"},
+            "02": {"h": "22si6bcw0zxz", "l": "w2cm4dx8ku73", "n": "8w5b6nknzhid"},
+            "03": {"h": "pc8denle3ekw", "l": "rv1udklycadh", "n": "zwyphi0py6pc"},
+            "04": {"h": "uafwpzvxdzg7", "l": "asqpl9gjmw1v", "n": "izoapr3yt8pu"},
+            "05": {"h": "dpcn32trh9mf", "l": "k366wrt7el76", "n": "djvn3lpovge0"},
+            "06": {"h": "l06sr2bk30za", "l": "jr78ydhtcj6s", "n": "ntq18w23tleq"}
+       },
         "episodes_names" : ["Thats the Idea, Ochaco", "Roaring Sports Festival", "In Their Own Quirky Ways", "Strategy, Strategy, Strategy", "Cavalry Battle Finale", "The Boy Born with Everything", "Victory or Defeat", "Battle On, Challengers!", "Bakugo vs. Uraraka", "Shoto Todoroki: Origin", "Fight on, Iida", "Todoroki vs. Bakugo", "Time to Pick Some Names", "Bizarre! Gran Torino Appears", "Midoriya and Shigaraki", "Hero Killer: Stain vs U.A. Students", "Climax", "The Aftermath of Hero Killer: Stain", "Everyones Internships", "Listen Up!! A Tale from the Past", "Gear Up for Final Exams", "Yaoyorozu: Rising", "Stripping the Varnish", "Katsuki Bakugo: Origin", "Encounter"]
     },
     "My Hero Academia Season 3" : {
