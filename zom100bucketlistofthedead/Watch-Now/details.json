@@ -1,24 +1,40 @@
 {
     "jap": {
-        "no_epi": "5",
+        "no_epi": "9",
         "link": "https://player.ryuk.to?id=zom-100-zombie-ni-naru-made-ni-shitai-100-no-koto-episode-",
         "down_links": [
             "MjA3ODcw",
             "MjA4Mjk3",
             "MjA4NjM0",
             "MjA5Mjc1",
-            "MjA5OTg1"
+            "MjA5OTg1",
+            "MjEwODY4",
+            "MjExMjI3",
+            "MjEyMTQy",
+            "MjEyNDYz"
         ]
     },
     "eng": {
-        "no_epi": "2",
+        "no_epi": "5",
         "link": "https://player.ryuk.to?id=zom-100-zombie-ni-naru-made-ni-shitai-100-no-koto-dub-episode-",
         "down_links": [
             "MjA5OTk1",
-            "MjEwNDUz"
+            "MjEwNDUz",
+            "MjEwODE5",
+            "MjExMTU1",
+            "MjEyMDkz"
         ]
     },
     "episodes_names": [
-        "Zom 100: Bucket List of the Dead"
+        "Akira of the Dead",
+        "Bucket List of the Dead",
+        "Best Friend of the Dead",
+        "Flight Attendant of the Dead",
+        "Hero of the Dead",
+        "RV of the Dead",
+        "Truck Stop of the Dead",
+        "Sushi & Hot Springs of the Dead",
+        "Treehouse of the Dead",
+        "Hometown of the Dead I"
     ]
 }
