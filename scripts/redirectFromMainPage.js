@@ -1,5 +1,5 @@
-// const url = window.location.href;
-url = "https://animerulz.in/myheroacademiaseason2/"
+const url = window.location.href;
+// url = "https://animerulz.in/Naruto/"
 const urlList = url.split("/");
 let index;
 
@@ -22,6 +22,6 @@ for(let i = 1; i <= redirectThis.length ; i ++){
         break;
     }
 }
-
+console.log(index);
 if(index)
     window.location.href = "https://animerulz.in/" + redirectTo[index - 1];
