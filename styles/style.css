@@ -330,6 +330,7 @@ h1{
     font-size: 40px;
     color: #faa300;
     /* color: rgba(0,0,0,0.8); */
+    font-weight: 700;
     margin: 10px 0;
     padding: 0 10px;
     display: -webkit-box;
@@ -410,7 +411,29 @@ h1{
     border-radius: 20px;
     padding: 0 20px;
     padding-bottom: 2px;
-    transition: all 1s;
+    transition: all 0.3s;
+    position: relative;
+}
+.button-watch-now:before, .button-read-manga:before{
+  content: "";
+  transition: all 0.5s;
+  z-index: -1;
+  position: absolute;
+  height: 120%;
+  width: 105%;
+  /* border: #faa300 solid 1px; */
+  border-radius: 20px;
+  left: calc(-2.5% - 1px);
+  top: -10%;
+}
+.button-watch-now:focus:before{ 
+  /* border: #faa300 solid 1px; */
+  background-color: #faa300;
+  opacity: 0.2;
+}
+.button-read-manga:focus:before{
+  background-color: #43a047;
+  opacity: 0.2;
 }
 .play-svg{
     height: 20px;
@@ -737,10 +760,10 @@ h1{
   }
 
   .anime-rec-div, .anime-tr{
-    animation: fadeIn 1s both ease;
+    animation: fadeIn 1s ease both;
     background-size: contain;
     animation-timeline: view();
-    animation-range: entry 5% cover 40%;
+    animation-range: entry 5% cover 30%;
   } 
   @keyframes fadeIn {
     0%{
@@ -759,6 +782,7 @@ h1{
   .anime-rec-div h2{
     color:rgba(255,255,255,0.8);
     text-align: center;
+    font-weight: 700;
     margin-bottom: 10px;
     font-size: 100%;
     display: -webkit-box;
@@ -766,11 +790,6 @@ h1{
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  /* @media only screen and (max-width:550px){
-    .anime-rec-div h2{
-      font-size: 20px;
-    }
-  } */
   .anime-rec-div .anime-rec-txt{
     width: 100%;
     background:linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0.7),rgba(0,0,0,0.1));
@@ -1552,7 +1571,7 @@ body{
   width: 20px;
   background-color: #faa300;
 } */
-.search-container .input-box__:focus{
+.search-container .input-box__:after{
   /* border-bottom: #faa300 solid 2px; */
   box-shadow: 1px 1px 1px 1px #faa300;
 }
