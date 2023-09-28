@@ -1,9 +1,10 @@
 const continueWatchingContainer = document.getElementsByClassName("continue-watching-division")[0];
+const continueWatchingData1 = localStorage.continueWatching;
+const continueWatchingData = JSON.parse(continueWatchingData1);
+
 
 function setContinueWatchingContainer(){
-    let continueWatchingData1 = localStorage.continueWatching;
-    // console.log(continueWatchingData);
-    let continueWatchingData = JSON.parse(continueWatchingData1);
+    
     if(continueWatchingData.length != 0){
         let tempData = "";
         let counteR = 0;
@@ -22,9 +23,8 @@ function setContinueWatchingContainer(){
             }
             else
                animeEpisodeNumberForHome = 1;
-            // console.log(animeNameForHome.replace(/[^a-zA-Z0-9]/g, "").toLowerCase());
-            tempData += `<div class="anime-continue-watching">
-                  <a class="anchor-to-continue-watching" title="Continue Watching ${animeNameForHome}" href="../${animeNameForHome.replace(/[^a-zA-Z0-9]/g, "").toLowerCase()}/Watch-Now/?ep=${animeEpisodeNumberForHome}&aud=${lastClickedAudioButtonForHome}">
+            tempData += `<div class="anime-continue-watching" onclick="rearrangeAnimes(${counteR + 1})">
+                  <a class="anchor-to-continue-watching" title="Continue Watching ${animeNameForHome}">
                      <div class="data_cont-watching__" style="background: url('${continueWatchingData[i].animeImage}') no-repeat center center;background-size: 100% auto;">
                         <div class="play-btn__">
                            <i class="fa-regular fa-circle-play"></i>
@@ -64,3 +64,10 @@ function setContinueWatchingContainer(){
 
 if(localStorage.continueWatching)
    setContinueWatchingContainer();
+
+function rearrangeAnimes(index){
+   let changePositionOf = continueWatchingData[continueWatchingData.length - index];
+   continueWatchingData.splice(continueWatchingData.length - index, 1);
+   continueWatchingData.push(changePositionOf);
+   localStorage.setItem("continueWatching", JSON.stringify(continueWatchingData));
+}
