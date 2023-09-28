@@ -9,9 +9,9 @@ function setContinueWatchingContainer(){
         let counteR = 0;
         for(let i = continueWatchingData.length - 1; i >= 0; i --){
             let animeNameForHome = continueWatchingData[i].animeName;
-            let lastClickedButtonForHome = localStorage.getItem("lastClickedButton" + animeNameForHome.replace(/\s+/g, ''));
-            let lastClickedAudioButtonForHome = localStorage.getItem("lastClickedButtonAudio" + animeNameForHome.replace(/\s+/g, ''));
-            console.log(lastClickedAudioButtonForHome);
+            let lastClickedButtonForHome = localStorage.getItem("lastClickedButton" + animeNameForHome.replace(/\s+/g, '').replace(":", ""));
+            let lastClickedAudioButtonForHome = localStorage.getItem("lastClickedButtonAudio" + animeNameForHome.replace(/\s+/g, '').replace(":", ""));
+            // console.log(animeNameForHome.replace(/\s+/g, '').replace(":", ""), lastClickedButtonForHome);
             if (lastClickedAudioButtonForHome == null)
                lastClickedAudioButtonForHome = "eng";
             let animeEpisodeNumberForHome;
@@ -22,7 +22,7 @@ function setContinueWatchingContainer(){
             }
             else
                animeEpisodeNumberForHome = 1;
-            console.log(animeNameForHome.replace(/[^a-zA-Z0-9]/g, "").toLowerCase());
+            // console.log(animeNameForHome.replace(/[^a-zA-Z0-9]/g, "").toLowerCase());
             tempData += `<div class="anime-continue-watching">
                   <a class="anchor-to-continue-watching" title="Continue Watching ${animeNameForHome}" href="../${animeNameForHome.replace(/[^a-zA-Z0-9]/g, "").toLowerCase()}/Watch-Now/?ep=${animeEpisodeNumberForHome}&aud=${lastClickedAudioButtonForHome}">
                      <div class="data_cont-watching__" style="background: url('${continueWatchingData[i].animeImage}') no-repeat center center;background-size: 100% auto;">
@@ -64,4 +64,3 @@ function setContinueWatchingContainer(){
 
 if(localStorage.continueWatching)
    setContinueWatchingContainer();
-
