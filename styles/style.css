@@ -1934,6 +1934,12 @@ body{
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
   }
+  .data-more-seasons-anime-con___ .anime-seasons-items__{
+    height: 80px;
+  }
+  .data-more-seasons-anime-con___ .anime-seasons-items__ .anime-seasons-item___ h2{
+    font-size: 13px;
+  }
 }
 @media only screen and (max-width:650px){
   .data-more-seasons-anime-con___{
