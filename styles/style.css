@@ -1,7 +1,6 @@
 html,body{
     margin: 0;
     padding:0;
-    /* max-width: 1500px; */
     background-color:rgba(0,0,0,0.95);
     scroll-behavior: smooth;
     margin-left: auto;
