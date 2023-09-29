@@ -227,7 +227,6 @@ function addAnimeToQueue(){
                 animeImage : animeImage__,
             }
         ];
-
         localStorage.setItem("continueWatching", JSON.stringify(animeDataCV));
     }else{
         let animeDataCV = {
@@ -290,11 +289,17 @@ setTrendingAnimeInSearch();
 
 
 
-const moreSeasonsOfThisSection = document.getElementsByClassName("anime-seasons-items__");
+const moreSeasonsOfThisSection = document.querySelectorAll(".anime-seasons-items__");
+// console.log(moreSeasonsOfThisSection);
 const wholeMoreSeasonsContainer = document.getElementsByClassName("more-season-anime-container__")[0];
 if(wholeMoreSeasonsContainer != undefined){
     if(moreSeasonsOfThisSection.length == 0)
         wholeMoreSeasonsContainer.style.display = "none";
+    else
+        for(let i = 0 ; i < moreSeasonsOfThisSection.length; i ++){
+            moreSeasonsOfThisSection[i].style.backgroundRepeat = "no-repeat";
+            moreSeasonsOfThisSection[i].style.backgroundSize = "100%";
+        }
 }
 
 const commentSection = document.getElementsByClassName("data-comment-section_")[0];
