@@ -8,14 +8,16 @@ const redirectThis = [
     "Naruto",
     "MyHeroAcademia",
     "DragonBallSuper",
-    "jujutsukaisenseason2"
+    "jujutsukaisenseason2",
+    "tokyorevengersseason2"
 ]
 const redirectTo = [
     "myheroacademia2",
     "naruto",
     "myheroacademia",
     "dragonballsuper",
-    "jujutsukaisen2ndseason"
+    "jujutsukaisen2ndseason",
+    "tokyorevengerschirstmasshowdown"
 ]
 
 for(let i = 1; i <= redirectThis.length ; i ++){
@@ -24,6 +26,6 @@ for(let i = 1; i <= redirectThis.length ; i ++){
         break;
     }
 }
-console.log(index);
+// console.log(index);
 if(index)
     window.location.href = "https://animerulz.in/" + redirectTo[index - 1];
