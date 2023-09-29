@@ -10,9 +10,8 @@ function setContinueWatchingContainer(){
         let counteR = 0;
         for(let i = continueWatchingData.length - 1; i >= 0; i --){
             let animeNameForHome = continueWatchingData[i].animeName;
-            let lastClickedButtonForHome = localStorage.getItem("lastClickedButton" + animeNameForHome.replace(/\s+/g, '').replace(":", ""));
-            let lastClickedAudioButtonForHome = localStorage.getItem("lastClickedButtonAudio" + animeNameForHome.replace(/\s+/g, '').replace(":", ""));
-            // console.log(animeNameForHome.replace(/\s+/g, '').replace(":", ""), lastClickedButtonForHome);
+            let lastClickedButtonForHome = localStorage.getItem("lastClickedButton" + animeNameForHome.replace(/[^a-zA-Z0-9]/g, ""));
+            let lastClickedAudioButtonForHome = localStorage.getItem("lastClickedButtonAudio" + animeNameForHome.replace(/[^a-zA-Z0-9]/g, ""));
             if (lastClickedAudioButtonForHome == null)
                lastClickedAudioButtonForHome = "eng";
             let animeEpisodeNumberForHome;
