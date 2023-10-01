@@ -12,7 +12,47 @@
 <url>
   <loc>https://animerulz.in/home/</loc>
   <lastmod>2023-09-21T05:51:12+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://animerulz.in/hindiddubbed</loc>
+  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://animerulz.in/telugudubbed</loc>
+  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://animerulz.in/tamildubbed</loc>
+  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://animerulz.in/naruto/</loc>
+  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://animerulz.in/myheroacademia2</loc>
+  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://animerulz.in/myheroacademia/</loc>
+  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://animerulz.in/malayalamdubbed</loc>
+  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://animerulz.in/bangalidubbed</loc>
+  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>https://animerulz.in/mostviewedanime/</loc>
@@ -91,31 +131,6 @@
 </url>
 <url>
   <loc>https://animerulz.in/dubbedanime/</loc>
-  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://animerulz.in/hindiddubbed</loc>
-  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://animerulz.in/telugudubbed</loc>
-  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://animerulz.in/tamildubbed</loc>
-  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://animerulz.in/malayalamdubbed</loc>
-  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://animerulz.in/bangalidubbed</loc>
   <lastmod>2023-09-21T05:51:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -285,11 +300,6 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://animerulz.in/naruto/</loc>
-  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://animerulz.in/drstonenewworld/Watch-Now/?ep=1&amp;aud=eng</loc>
   <lastmod>2023-09-21T05:51:12+00:00</lastmod>
   <priority>0.64</priority>
@@ -326,11 +336,6 @@
 </url>
 <url>
   <loc>https://animerulz.in/myheroacademiaseason6/</loc>
-  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://animerulz.in/myheroacademia/</loc>
   <lastmod>2023-09-21T05:51:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -1551,11 +1556,6 @@
 </url>
 <url>
   <loc>https://animerulz.in/myheroacademia/Watch-Now/?ep=1&amp;aud=eng</loc>
-  <lastmod>2023-09-21T05:51:12+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://animerulz.in/myheroacademia2</loc>
   <lastmod>2023-09-21T05:51:12+00:00</lastmod>
   <priority>0.51</priority>
 </url>
