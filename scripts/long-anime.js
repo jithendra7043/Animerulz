@@ -124,7 +124,7 @@ let epi_num = urlParams.get("ep");
 let epi_aud = urlParams.get("aud");
 // let flagg;
 let long_anime_file = new XMLHttpRequest();
-long_anime_file.open("get", "http://127.0.0.1:5501/scripts/JSON/long-anime.json", true);
+long_anime_file.open("get", "https://animerulz.in/scripts/JSON/long-anime.json", true);
 long_anime_file.send();
 
 document.getElementById("episode-number-in-video").innerHTML = epi_num;
@@ -158,7 +158,7 @@ long_anime_file.onload = function(){
             if(i == epi_num){
                 temp = "<div class='episode active' id='" + anime + "-episode-" + i + "'>" + i + "</div>";
             }else{ 
-                var temp_1 = 'window.open("http://127.0.0.1:5501/' + anime.toLowerCase() + "/Watch-Now/?ep=" + i + '&aud=' + epi_aud + '", "_self")';
+                var temp_1 = 'window.open("https://animerulz.in/' + anime.toLowerCase() + "/Watch-Now/?ep=" + i + '&aud=' + epi_aud + '", "_self")';
                 temp = "<div class='episode' id='" + anime + "-episode-" + i + "' onclick='" + temp_1 + "'>" + i +"</div>" ;
                 // temp = "<div class='episode' id='episode-" + i + "'>" + i +"</div>" ;
             }
@@ -177,7 +177,7 @@ long_anime_file.onload = function(){
                 if( epi_num >= i && epi_num < i + 100)
                     temp = "<div class='active'><span> Episodes : " + min_range + "-" + max_range + "</span></div>";
                 else {
-                    temp_1 = "'http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + i + "&aud=" + epi_aud + "', '_self'";
+                    temp_1 = "'https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + i + "&aud=" + epi_aud + "', '_self'";
                     tempNew = 'onclick="window.open(' + temp_1 + ')"';
                     temp = "<div " + tempNew + "><span> Episodes : " + i + "-" + (i + 99) + "</span></div>";
                 }
@@ -186,7 +186,7 @@ long_anime_file.onload = function(){
                 if( epi_num >= i && epi_num <= i + 100)
                     temp = "<div class='active'><span> Episodes : " + min_range + "-" + current_long_anime_epi_num + "</span></div>";
                 else {
-                    temp_1 = "'http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + i + "&aud=" + epi_aud + "', '_self'";
+                    temp_1 = "'https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + i + "&aud=" + epi_aud + "', '_self'";
                     tempNew = 'onclick="window.open(' + temp_1 + ')"';
                     temp = "<div " + tempNew + "><span> Episodes : " + i + "-" + current_long_anime_epi_num + "</span></div>";
                 }
@@ -198,9 +198,9 @@ long_anime_file.onload = function(){
         episodes_numbers_new.innerHTML = outputNew;
 
         if(epi_num != 1)
-            document.getElementsByClassName("button-1")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (epi_num - 1) + "&aud=" + epi_aud + "', '_self')"); 
+            document.getElementsByClassName("button-1")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (epi_num - 1) + "&aud=" + epi_aud + "', '_self')"); 
         if(epi_num != current_long_anime_epi_num)
-            document.getElementsByClassName("button-2")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (Number(epi_num) + 1) + "&aud=" + epi_aud + "', '_self')"); 
+            document.getElementsByClassName("button-2")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (Number(epi_num) + 1) + "&aud=" + epi_aud + "', '_self')"); 
 
         //for setting video and audio buttons
         let current_long_anime_epi_num_dub = current_long_anime_data["eng"]['no_epi'];
@@ -268,60 +268,60 @@ long_anime_file.onload = function(){
         catch{
             // console.log("Hello");
             let anime_audios = document.getElementsByClassName("audio")[0];
-            temp = "http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=" + anime_audios.getAttribute("name") ;
+            temp = "https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=" + anime_audios.getAttribute("name") ;
             window.open(temp, "_self");
         }
         
         try{
             if(epi_aud != 'jap')
-                document.getElementsByName("jap")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=jap', '_self')");
+                document.getElementsByName("jap")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=jap', '_self')");
             if(epi_aud != 'eng')
-                document.getElementsByName("eng")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=eng', '_self')");
+                document.getElementsByName("eng")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=eng', '_self')");
             }
         catch{};
         try{
             if(epi_aud != 'mul')
-            document.getElementsByName("mul")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul', '_self')");
+            document.getElementsByName("mul")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul', '_self')");
         }
         catch{}
         try{
             if(epi_aud != 'mul1080')
-            document.getElementsByName("mul1080")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul1080', '_self')");
+            document.getElementsByName("mul1080")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul1080', '_self')");
         }
         catch{}
         try{
             if(epi_aud != 'mul720')
-            document.getElementsByName("mul720")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul720', '_self')");
+            document.getElementsByName("mul720")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul720', '_self')");
         }
         catch{}
         try{
             if(epi_aud != 'mul480')
-            document.getElementsByName("mul480")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul480', '_self')");
+            document.getElementsByName("mul480")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul480', '_self')");
         }
         catch{}
         try{
             if(epi_aud != 'tel')
-            document.getElementsByName("tel")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tel', '_self')");
+            document.getElementsByName("tel")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tel', '_self')");
         }
         catch{};
         try{
             if(epi_aud != 'hin')
-            document.getElementsByName("hin")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=hin', '_self')");
+            document.getElementsByName("hin")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=hin', '_self')");
         }
         catch{};
         try{
             if(epi_aud != 'tam')
-            document.getElementsByName("tam")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tam', '_self')");
+            document.getElementsByName("tam")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tam', '_self')");
         }
         catch{};
         try{
             if(epi_aud != 'mal')
-            document.getElementsByName("mal")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mal', '_self')");
+            document.getElementsByName("mal")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mal', '_self')");
         }
         catch{};
         try{
             if(epi_aud != 'ben')
-            document.getElementsByName("ben")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=ben', '_self')");
+            document.getElementsByName("ben")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=ben', '_self')");
         }
         catch{};
         var video_player = document.getElementsByTagName('iframe')[0];
@@ -570,7 +570,7 @@ else if(shortAnimes.includes(animeNameee)){
                     '</div></div></div>';
                 }
                 else{
-                    temp_1 = "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + i + "&aud=" + epi_aud + "', '_self')";
+                    temp_1 = "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + i + "&aud=" + epi_aud + "', '_self')";
                     temp = '<div class="episode-short" onclick="' + temp_1 + '"><div class="short-anime-ep"  id="' + anime + '-episode-' + i + '"><div class="short-anime-num episode-alternate-' + first + '">' + i +'</div><div class="short-anime-name episode-alternate-' + second + '"><span>' + episodeNameNew + '</span></div></div></div>'
                 }
                 outputNew += temp;
@@ -582,9 +582,9 @@ else if(shortAnimes.includes(animeNameee)){
             catch{}
 
             if(epi_num != 1)
-                document.getElementsByClassName("button-1")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (epi_num - 1) + "&aud=" + epi_aud + "', '_self')"); 
+                document.getElementsByClassName("button-1")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (epi_num - 1) + "&aud=" + epi_aud + "', '_self')"); 
             if(epi_num != current_short_anime_epi_num)
-                document.getElementsByClassName("button-2")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (Number(epi_num) + 1) + "&aud=" + epi_aud + "', '_self')"); 
+                document.getElementsByClassName("button-2")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (Number(epi_num) + 1) + "&aud=" + epi_aud + "', '_self')"); 
             let newEpiNum;
             //for setting video and audio buttons
             let current_short_anime_epi_num_dub = current_short_anime_data["eng"]['no_epi'];
@@ -650,64 +650,64 @@ else if(shortAnimes.includes(animeNameee)){
             }
             catch{
                 let anime_audios = document.getElementsByClassName("audio")[0];
-                temp = "http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=" + anime_audios.getAttribute("name") ;
+                temp = "https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=" + anime_audios.getAttribute("name") ;
                 window.open(temp, "_self");
             }
             try{
                 if(epi_aud != 'mul')
-                document.getElementsByName("mul")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul', '_self')");
+                document.getElementsByName("mul")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul', '_self')");
             }
             catch{};
             try{
                 if(epi_aud != 'jap')
-                    document.getElementsByName("jap")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=jap', '_self')");
+                    document.getElementsByName("jap")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=jap', '_self')");
                 if(epi_aud != 'eng')
-                    document.getElementsByName("eng")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=eng', '_self')");
+                    document.getElementsByName("eng")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=eng', '_self')");
                 }
             catch{};
             try{
                 if(epi_aud != 'mul')
-                document.getElementsByName("mul")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul', '_self')");
+                document.getElementsByName("mul")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul', '_self')");
             }
             catch{}
             try{
                 if(epi_aud != 'mul1080')
-                document.getElementsByName("mul1080")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul1080', '_self')");
+                document.getElementsByName("mul1080")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul1080', '_self')");
             }
             catch{}
             try{
                 if(epi_aud != 'mul720')
-                document.getElementsByName("mul720")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul720', '_self')");
+                document.getElementsByName("mul720")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul720', '_self')");
             }
             catch{}
             try{
                 if(epi_aud != 'mul480')
-                document.getElementsByName("mul480")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul480', '_self')");
+                document.getElementsByName("mul480")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul480', '_self')");
             }
             catch{}
             try{
                 if(epi_aud != 'tel')
-                document.getElementsByName("tel")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tel', '_self')");
+                document.getElementsByName("tel")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tel', '_self')");
             }
             catch{};
             try{
                 if(epi_aud != 'hin')
-                document.getElementsByName("hin")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=hin', '_self')");
+                document.getElementsByName("hin")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=hin', '_self')");
             }
             catch{};
             try{
                 if(epi_aud != 'tam')
-                document.getElementsByName("tam")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tam', '_self')");
+                document.getElementsByName("tam")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tam', '_self')");
             }
             catch{};
             try{
                 if(epi_aud != 'mal')
-                document.getElementsByName("mal")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mal', '_self')");
+                document.getElementsByName("mal")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mal', '_self')");
             }
             catch{};
             try{
                 if(epi_aud != 'ben')
-                document.getElementsByName("ben")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=ben', '_self')");
+                document.getElementsByName("ben")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=ben', '_self')");
             }
             catch{};
             var video_player = document.getElementsByTagName('iframe')[0];
@@ -941,7 +941,7 @@ else{
                     '</div></div></div>';
                 }
                 else{
-                    temp_1 = "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + i + "&aud=" + epi_aud + "', '_self')";
+                    temp_1 = "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + i + "&aud=" + epi_aud + "', '_self')";
                     temp = '<div class="episode-short" onclick="' + temp_1 + '"><div class="short-anime-ep"  id="' + anime + '-episode-' + i + '"><div class="short-anime-num episode-alternate-' + first + '">' + i +'</div><div class="short-anime-name episode-alternate-' + second + '"><span>' + episodeNameNew + '</span></div></div></div>'
                 }
                 outputNew += temp;
@@ -953,9 +953,9 @@ else{
             catch{}
 
             if(epi_num != 1)
-                document.getElementsByClassName("button-1")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (epi_num - 1) + "&aud=" + epi_aud + "', '_self')"); 
+                document.getElementsByClassName("button-1")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (epi_num - 1) + "&aud=" + epi_aud + "', '_self')"); 
             if(epi_num != current_short_anime_epi_num)
-                document.getElementsByClassName("button-2")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (Number(epi_num) + 1) + "&aud=" + epi_aud + "', '_self')"); 
+                document.getElementsByClassName("button-2")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + (Number(epi_num) + 1) + "&aud=" + epi_aud + "', '_self')"); 
 
             //for setting video and audio buttons
             let newEpiNum;
@@ -1028,65 +1028,65 @@ else{
             }
             catch{
                 let anime_audios = document.getElementsByClassName("audio")[0];
-                temp = "http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=" + anime_audios.getAttribute("name") ;
+                temp = "https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=" + anime_audios.getAttribute("name") ;
                 // alert("It's Me");
                 window.open(temp, "_self");
             }
             try{
                 if(epi_aud != 'mul')
-                document.getElementsByName("mul")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul', '_self')");
+                document.getElementsByName("mul")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul', '_self')");
             }
             catch{};
             try{
                 if(epi_aud != 'jap')
-                    document.getElementsByName("jap")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=jap', '_self')");
+                    document.getElementsByName("jap")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=jap', '_self')");
                 if(epi_aud != 'eng')
-                    document.getElementsByName("eng")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=eng', '_self')");
+                    document.getElementsByName("eng")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=eng', '_self')");
                 }
             catch{};
             try{
                 if(epi_aud != 'mul')
-                document.getElementsByName("mul")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul', '_self')");
+                document.getElementsByName("mul")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul', '_self')");
             }
             catch{}
             try{
                 if(epi_aud != 'mul1080')
-                document.getElementsByName("mul1080")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul1080', '_self')");
+                document.getElementsByName("mul1080")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul1080', '_self')");
             }
             catch{}
             try{
                 if(epi_aud != 'mul720')
-                document.getElementsByName("mul720")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul720', '_self')");
+                document.getElementsByName("mul720")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul720', '_self')");
             }
             catch{}
             try{
                 if(epi_aud != 'mul480')
-                document.getElementsByName("mul480")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul480', '_self')");
+                document.getElementsByName("mul480")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mul480', '_self')");
             }
             catch{}
             try{
                 if(epi_aud != 'tel')
-                document.getElementsByName("tel")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tel', '_self')");
+                document.getElementsByName("tel")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tel', '_self')");
             }
             catch{};
             try{
                 if(epi_aud != 'hin')
-                document.getElementsByName("hin")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=hin', '_self')");
+                document.getElementsByName("hin")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=hin', '_self')");
             }
             catch{};
             try{
                 if(epi_aud != 'tam')
-                document.getElementsByName("tam")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tam', '_self')");
+                document.getElementsByName("tam")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=tam', '_self')");
             }
             catch{};
             try{
                 if(epi_aud != 'mal')
-                document.getElementsByName("mal")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mal', '_self')");
+                document.getElementsByName("mal")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=mal', '_self')");
             }
             catch{};
             try{
                 if(epi_aud != 'ben')
-                document.getElementsByName("ben")[0].setAttribute("onclick", "window.open('http://127.0.0.1:5501/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=ben', '_self')");
+                document.getElementsByName("ben")[0].setAttribute("onclick", "window.open('https://animerulz.in/" + anime.toLowerCase() + "/Watch-Now/?ep=" + epi_num + "&aud=ben', '_self')");
             }
             catch{};
             var video_player = document.getElementsByTagName('iframe')[0];
